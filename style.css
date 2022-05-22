@@ -1,0 +1,377 @@
+/* font-family: 'Macondo', cursive;
+font-family: 'Roboto', sans-serif; */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--content-color);
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+/* Declaring Variables and Colors */
+:root {
+  /* --bcg-color: rgb(217, 248, 248); */
+  --content-color: rgb(143, 216, 216);
+  --nav-color: rgb(120, 114, 114);
+  /* --content-color: #ddd; */
+  --logo-color: linear-gradient(to left, red, white);
+  --borders: 2px 5px 8px rgb(103, 103, 206);
+}
+#container {
+  display: grid;
+}
+
+/* HEADER AND NAVICATION SECTION STARTS */
+
+/* Header Section Starts */
+#header-img {
+  max-width: 100%;
+  width: min(80px, 8vw);
+  aspect-ratio: 1/1;
+  background: var(--logo-color);
+}
+header {
+  height: min(80px, 8vw);
+  display: flex;
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.empty {
+  height: min(85px, 8.3vw);
+  background-color: black;
+}
+/* Header Section Ends */
+
+/* Navigation Section Starts */
+#nav-bar {
+  background-color: rgb(120, 114, 114);
+  width: 100%;
+}
+#nav-bar ul {
+  margin: 0;
+  display: flex;
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+#nav-bar ul a {
+  text-decoration: none;
+  color: gold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+#nav-bar ul a:hover {
+  color: rgb(212, 187, 45);
+  font-size: 2.2rem;
+  background-color: red;
+  border-radius: 2px;
+}
+/* Navigation Section Ends */
+
+/* HEADER AND NAVIGATION SECTION ENDS */
+
+/* Home Section */
+#Home {
+  display: flex;
+  height: 91vh;
+  background-image: url(https://cdn.motor1.com/images/mgl/2bmjB/s3/matte-gold-lamborghini-aventador-sv-by-empire-auto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#Home h1 {
+  color: rgb(219, 60, 60);
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 15rem;
+  font-family: "Macondo", cursive;
+}
+form {
+  background-color: rgba(163, 143, 27, 0.5);
+  width: 30%;
+  max-height: 100px;
+  margin: 10px;
+  padding-top: 3rem;
+}
+input[type="email"] {
+  display: block;
+  margin: auto;
+  width: 95%;
+}
+input[type="submit"] {
+  display: block;
+  margin: 1rem auto auto auto;
+}
+
+/* About Section */
+#About {
+  background-color: var(--content-color);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  grid-template-areas:
+    "h2  h3"
+    "about-a offers-a"
+    "ads-pic offers-b"
+    "about-b offers-c"
+    "about-b offers-d";
+}
+.about-us {
+  box-shadow: var(--borders);
+  background-color: rgb(233, 226, 226);
+  font-size: 3rem;
+  grid-area: h2;
+  text-align: center;
+}
+.about-a {
+  background-color: var(--content-color);
+  grid-area: about-a;
+  padding: 1rem;
+  line-height: 2rem;
+  text-align: justify;
+  height: fit-content;
+}
+.about-b {
+  background-color: var(--content-color);
+  grid-area: about-b;
+  padding: 1rem;
+  line-height: 2rem;
+  text-align: justify;
+}
+#ads-pic {
+  grid-area: ads-pic;
+  max-width: 100%;
+  object-fit: cover;
+}
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  box-shadow: var(--borders);
+  background-color: rgb(233, 226, 226);
+}
+h3 {
+  background-color: rgb(233, 226, 226);
+  font-size: 2.5rem;
+  grid-area: h3;
+  text-align: center;
+  box-shadow: var(--borders);
+}
+.offers {
+  background-color: var(--nav-color);
+  padding: 2rem;
+  margin: 10px;
+  box-shadow: var(--borders);
+  color: rgb(250, 233, 233);
+}
+h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+.fa-solid {
+  width: 100%;
+  text-align: center;
+  color: gold;
+}
+p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Prices Section  */
+#Prices img {
+  max-width: 100%;
+  height: 100%;
+  box-shadow: -3px -5px 8px;
+  object-fit: cover;
+  object-position: bottom;
+}
+#Prices {
+  display: grid;
+  row-gap: 4rem;
+  padding: 2rem;
+  background-color: rgb(216, 208, 208);
+}
+.car {
+  box-shadow: -3px -5px 8px;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--nav-color);
+  color: rgb(250, 233, 233);
+}
+.buy-price {
+  background: rgb(61, 60, 60);
+  font-size: 2rem;
+}
+input[type="button"] {
+  width: 40%;
+  font-size: 1.6rem;
+  background-color: gold;
+}
+.car-b .amount {
+  order: 2;
+}
+.car-b .cars {
+  order: 1;
+}
+
+/* Collections */
+#video {
+  display: block;
+  margin: auto;
+  border: none;
+  width: 100%;
+  height: 400px;
+}
+#Others {
+  display: grid;
+  row-gap: 4rem;
+  padding: 2rem;
+  margin-top: 100px;
+  width: 100%;
+}
+.collections {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+#footer {
+  background-color: var(--nav-color);
+  margin: 2rem;
+  color: whitesmoke;
+}
+@media screen and (max-width: 790px) {
+  #Home h1 {
+    font-size: 13rem;
+  }
+  #video {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #Home h1 {
+    font-size: 11rem;
+  }
+  #Home {
+    height: 70vh;
+  }
+  #video {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #video {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+  }
+  #Home {
+    height: 40vh;
+  }
+  #nav-bar ul a {
+    font-size: 1.3rem;
+  }
+  #nav-bar ul a:hover {
+    font-size: 1rem;
+  }
+  #Home h1 {
+    font-size: 5rem;
+  }
+  #About {
+    background-color: var(--content-color);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    grid-template-areas:
+      "h2"
+      "about-a"
+      "ads-pic"
+      "about-b"
+      "h3"
+      "offers-a"
+      "offers-b"
+      "offers-c"
+      "offers-d";
+  }
+  .car {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .car .amount {
+    order: 2;
+  }
+  .car .cars {
+    order: 1;
+  }
+  .collections {
+    display: grid;
+    gap: 10px;
+    background: var(--logo-color);
+  }
+  .amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--nav-color);
+    color: rgb(250, 233, 233);
+  }
+  .buy-price {
+    background: rgb(61, 60, 60);
+    font-size: 1.5rem;
+  }
+  input[type="button"] {
+    width: 40%;
+    font-size: 1.1rem;
+    background-color: gold;
+  }
+  .amount p {
+    font-size: 1rem;
+  }
+  #Prices {
+    display: grid;
+    row-gap: 4rem;
+    padding: 2rem;
+  }
+  #Prices img {
+    height: auto;
+  }
+  #header {
+    height: 50px;
+  }
+}
